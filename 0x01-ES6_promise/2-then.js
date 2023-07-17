@@ -7,7 +7,7 @@ export default function handleResponseFromAPI(promise) {
     if (promise) {
       resolve(obj);
     } else {
-      const err = new Error();
+      const err = new Error('');
       reject(err);
     }
     console.log('Got a response from the API');
