@@ -4,8 +4,8 @@ export default function handleResponseFromAPI(promise) {
       status: 200,
       body: 'success',
     }))
-    .catch(() => (new Error('error mesg')))
+    .catch(() => (new Error()))
     .finally(() => {
-      console.log('Got a response from the API to the console');
+      console.log('Got a response from the API');
     });
 }
