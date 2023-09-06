@@ -1,6 +1,7 @@
 // Importing the functions from the respective files
-import { signUpUser } from './4-user-promise.js';
-import { uploadPhoto } from './5-photo-reject.js';
+import signUpUser from './4-user-promise';
+
+import uploadPhoto from './5-photo-reject';
 
 // Function to handle profile signup
 export default async function handleProfileSignup(firstName, lastName, fileName) {
@@ -26,8 +27,8 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
 
     return resultArray;
   } catch (error) {
-    console.error("An error occurred:", error);
-   // throw error;
+    // console.error('An error occurred:', error);
+    // throw error;
+    return Promise.reject(error);
   }
 }
-
