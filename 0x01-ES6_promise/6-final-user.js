@@ -27,8 +27,7 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
 
     return resultArray;
   } catch (error) {
-    // console.error('An error occurred:', error);
-    // throw error;
-    return Promise.reject(error);
+    console.error(error);
+    throw error;
   }
 }
