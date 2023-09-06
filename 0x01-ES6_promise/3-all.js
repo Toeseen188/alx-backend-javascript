@@ -7,6 +7,6 @@ export default function handleProfileSignup() {
       console.log(uploadPhotoResult.body, createUserResult.firstName, createUserResult.lastName);
     })
     .catch(() => {
-      console.error('Signup system offline');
+      console.log('Signup system offline');
     });
 }
