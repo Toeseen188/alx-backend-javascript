@@ -10,6 +10,7 @@ export default async function asyncUploadUser() {
     };
     return obj;
   } catch (error) {
+    console.error(error);
     const obj = {
       photo: null,
       user: null,
