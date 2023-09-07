@@ -1,9 +1,8 @@
 import { uploadPhoto, createUser } from './utils';
 
 export default async function asyncUploadUser() {
-  const [uploadValue, createValue] = await Promise.all([uploadPhoto(), createUser()]);
-
   try {
+    const [uploadValue, createValue] = await Promise.all([uploadPhoto(), createUser()]);
     const obj = {
       photo: uploadValue,
       user: createValue,
