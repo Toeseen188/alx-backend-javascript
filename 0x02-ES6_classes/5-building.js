@@ -1,8 +1,8 @@
 export default class Building {
   constructor(sqft) {
-   // if (new.target === Building) {
-     // throw new Error('Can"t instantiate class Building');
-//    }
+    // if (new.target === Building) {
+    // throw new Error('Can"t instantiate class Building');
+    //    }
     this._sqft = sqft;
   }
 
