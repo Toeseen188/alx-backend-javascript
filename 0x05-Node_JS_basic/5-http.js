@@ -18,8 +18,10 @@ const app = http.createServer((req, res) => {
         res.end('This is the list of our students');
       })
       .catch((error) => {
-        console.log(`Error: ${error}`);
+        res.end(`Error: ${error}`);
       });
+  } else {
+    res.end('Not found\n');
   }
 });
 // set port number
