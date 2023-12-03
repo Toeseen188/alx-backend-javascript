@@ -4,7 +4,7 @@ const countStudents = require('./3-read_file_async');
 
 const app = http.createServer((req, res) => {
   // set the header
-  res.writeHead(200, { 'Content-Type': 'Text/plain' });
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
 
   if (req.url === '/') {
     // if url is '/'
@@ -12,13 +12,13 @@ const app = http.createServer((req, res) => {
   } else if (req.url === '/students') {
     // respond if url is '/students'
 
-    const path = process.argv[2];
+    const path = process.argv[2] || './database.csv';
     countStudents(path)
       .then(() => {
         res.end('This is the list of our students');
       })
       .catch((error) => {
-        res.end(`Error: ${error}`);
+        console.log(`Error: ${error}`);
       });
   }
 });
