@@ -8,6 +8,7 @@ console.log('Welcome to Holberton School, what is your name?');
 
 r.on('line', (data) => {
   console.log(`Your name is: ${data}`);
+  r.close();
 });
 
 r.on('close', () => {
